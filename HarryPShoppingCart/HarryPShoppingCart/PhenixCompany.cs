@@ -18,32 +18,46 @@ namespace HarryPShoppingCart
 
         public int Settle()
         {
-            int count = 0;
+            int count = this._Books.Count;
+            double off = 1;
             int result = 0;
-
-            foreach (Book item in this._Books)
-            {
-                count = count + 1;
-                result = result + (item.Amount * item.Count);
-            }
-
+                        
             if (count == 2)
             {
-                result = (int)(result * 0.95);
+                off = 0.95;
             }
             else if (count == 3)
             {
-                result = (int)(result * 0.9);
+                off = 0.9;
             }
             else if (count == 4)
             {
-                result = (int)(result * 0.8);
+                off = 0.8;
             }
             else if (count == 5)
             {
-                result = (int)(result * 0.75);
+                off = 0.75;
             }
-            
+
+            foreach (Book item in this._Books)
+            {
+                for (int i = 0; i < item.Count; i++)
+                {
+                    if (i == 0)
+                    {
+                        //有折扣
+                        result = result + (int)(item.Amount * off);
+                    }
+                    else
+                    {
+                        //沒折扣
+                        result = result + (item.Amount * (item.Count - 1 ));
+                    }
+                    
+                }
+                
+            }
+
 
             return result;
         }
