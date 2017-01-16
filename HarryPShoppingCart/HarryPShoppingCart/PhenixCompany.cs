@@ -5,18 +5,33 @@ namespace HarryPShoppingCart
 {
     public class PhenixCompany
     {
-        private Book _Books;
+        private List<Book> _Books;
 
+        public PhenixCompany()
+        {
+            this._Books = new List<Book>();
+        }
         public void Buy(Book book)
         {
-            this._Books = book;
+            this._Books.Add(book);
         }
 
         public int Settle()
         {
+            int count = 0;
             int result = 0;
 
-            result = this._Books.Count * this._Books.Amount;
+            foreach (Book item in this._Books)
+            {
+                count = count + 1;
+                result = result + (item.Amount * item.Count);
+            }
+
+            if (count == 2)
+            {
+                result = (int)(result * 0.95);
+            }
+            
 
             return result;
         }
