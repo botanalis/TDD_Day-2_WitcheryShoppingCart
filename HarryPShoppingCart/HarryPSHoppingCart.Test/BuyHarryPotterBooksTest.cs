@@ -108,6 +108,23 @@ namespace HarryPSHoppingCart.Test
             //assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void 購買第1集_1本_第2集_2本_第3集_2本_10_5_off折扣_總金額460元()
+        {
+            //arrange
+            PhenixCompany target = new PhenixCompany();
+            int expected = 460;
+
+            //act
+            target.Buy(new Book { Title = "哈利波特", Story = 1, Count = 1, Amount = 100 });
+            target.Buy(new Book { Title = "哈利波特", Story = 2, Count = 2, Amount = 100 });
+            target.Buy(new Book { Title = "哈利波特", Story = 3, Count = 2, Amount = 100 });
+            int actual = target.Settle();
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 
 }
