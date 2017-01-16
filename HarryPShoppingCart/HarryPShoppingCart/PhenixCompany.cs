@@ -35,6 +35,10 @@ namespace HarryPShoppingCart
             {
                 result = (int)(result * 0.9);
             }
+            else if (count == 4)
+            {
+                result = (int)(result * 0.8);
+            }
             
 
             return result;
