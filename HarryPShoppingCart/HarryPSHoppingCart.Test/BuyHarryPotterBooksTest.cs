@@ -15,7 +15,7 @@ namespace HarryPSHoppingCart.Test
             int expected = 100;
 
             //act
-            target.Buy(new Book { Title = "哈利波特", Story = 1, Count = 1 });
+            target.Buy(new Book { Title = "哈利波特", Story = 1, Count = 1, Amount = 100 });
             int actual = target.Settle();
 
             //assert
