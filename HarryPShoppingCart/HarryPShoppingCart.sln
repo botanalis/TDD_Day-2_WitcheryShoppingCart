@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarryPShoppingCart", "HarryPShoppingCart\HarryPShoppingCart.csproj", "{A6A93BF2-8236-4EF3-BCDE-72DE0D817B80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarryPSHoppingCart.Test", "HarryPSHoppingCart.Test\HarryPSHoppingCart.Test.csproj", "{6CD2BD8F-8A15-4BD0-8977-B4A587865894}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6A93BF2-8236-4EF3-BCDE-72DE0D817B80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6A93BF2-8236-4EF3-BCDE-72DE0D817B80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6A93BF2-8236-4EF3-BCDE-72DE0D817B80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6A93BF2-8236-4EF3-BCDE-72DE0D817B80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CD2BD8F-8A15-4BD0-8977-B4A587865894}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CD2BD8F-8A15-4BD0-8977-B4A587865894}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CD2BD8F-8A15-4BD0-8977-B4A587865894}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CD2BD8F-8A15-4BD0-8977-B4A587865894}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
