@@ -18,6 +18,7 @@ namespace HarryPShoppingCart
 
         public int Settle()
         {
+            PhenixCompany store = new PhenixCompany();
             //取得書籍數量
             int count = this._Books.Count;
             //取得折扣
@@ -28,6 +29,7 @@ namespace HarryPShoppingCart
 
             foreach (Book item in this._Books)
             {
+
                 for (int i = 0; i < item.Count; i++)
                 {
                     if (i == 0)
@@ -38,13 +40,23 @@ namespace HarryPShoppingCart
                     else
                     {
                         //沒折扣
-                        result = result + (item.Amount * (item.Count - 1 ));
+                        
+                        
+
+                        //result = result + (item.Amount * (item.Count - 1 ));
                     }
-                    
+
                 }
-                
+
+                item.Count = item.Count - 1;
+
+                if (item.Count != 0)
+                {
+                    store.Buy(item);
+                }
             }
 
+            result = result + (count == 0 ? 0 : store.Settle());
 
             return result;
         }
