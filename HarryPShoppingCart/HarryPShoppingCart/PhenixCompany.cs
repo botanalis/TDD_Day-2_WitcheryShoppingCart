@@ -18,26 +18,13 @@ namespace HarryPShoppingCart
 
         public int Settle()
         {
+            //取得書籍數量
             int count = this._Books.Count;
-            double off = 1;
+            //取得折扣
+            double off = getDiscount(count);
+
             int result = 0;
                         
-            if (count == 2)
-            {
-                off = 0.95;
-            }
-            else if (count == 3)
-            {
-                off = 0.9;
-            }
-            else if (count == 4)
-            {
-                off = 0.8;
-            }
-            else if (count == 5)
-            {
-                off = 0.75;
-            }
 
             foreach (Book item in this._Books)
             {
@@ -60,6 +47,30 @@ namespace HarryPShoppingCart
 
 
             return result;
+        }
+
+        private double getDiscount(int count)
+        {
+            double off = 1;
+
+            if (count == 2)
+            {
+                off = 0.95;
+            }
+            else if (count == 3)
+            {
+                off = 0.9;
+            }
+            else if (count == 4)
+            {
+                off = 0.8;
+            }
+            else if (count == 5)
+            {
+                off = 0.75;
+            }
+
+            return off;
         }
     }
 }
